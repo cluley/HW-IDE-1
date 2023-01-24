@@ -8,6 +8,11 @@ void wipe(int*& arr) {
 
 int main(int argc, char** argv) {
 	std::ifstream input("in.txt");
+	if (!input.is_open())
+	{
+		std::cout << "Failed to open the file!" << std::endl;
+		exit(EXIT_FAILURE);
+	}
 
 	int size1;
 	input >> size1;
